@@ -10,10 +10,10 @@ N="\e[0m"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "$2 is $R Failed $N"
+        echo -e "$3 is $R Failed $N"
         exit 1
     else
-        echo -e "$2 is $G success"
+        echo -e "$3 is $G success"
     fi
 }
 
@@ -35,12 +35,12 @@ else
     echo "Git is already installed"
 fi
 
-dnf list installed mysqlsee
+dnf list installed mysql
 
 if [ $? -ne 0 ]
 then 
     echo "mysql is not installed, installing now"
-    dnf install mysqlww -y
+    dnf install mysql -y
     VALIDATE $? "Installing mysql"
 
 else 

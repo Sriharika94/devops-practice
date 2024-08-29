@@ -31,7 +31,7 @@ fi
 for package in $@
 do
     dnf list installed $package
-    if[ $? -ne 0 ]
+    if [ $? -ne 0 ]
     then
         echo "$package is not installed installing it"
         dnf installing $package -y

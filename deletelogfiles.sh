@@ -10,12 +10,12 @@ else
     exit 1
 fi
 
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
-echo "Files =$FILES"
+FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
+echo "Files: $FILES"
 
 while IFS= read -r file #IFS , internal field separator,empty will ignore ,-r means not to ignore special characters like /
 do
-    echo "deleting file "$file"
+    echo "deleting file: $file"
     rm -rf $file
 done <<< $FILES
 

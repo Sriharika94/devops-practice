@@ -39,7 +39,7 @@ then
     if [ -f $ZIP_FILE ]
     then
         echo "Succesfully zipped files"
-        while IFS= read -r file #IFS , internal field separator,empty will ignore ,-r means not to ignore special characters like /
+        while IFS= read -r file
         do
             echo "deleting file: $file"
             rm -rf $file

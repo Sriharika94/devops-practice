@@ -38,7 +38,7 @@ then
 
     if [ -f $ZIP_FILE ]
     then
-        echo "Succesfully zipped files older than $DAYS"
+        echo "Succesfully zipped files"
        while IFS= read -r file #IFS , internal field separator,empty will ignore ,-r means not to ignore special characters like /
         do
             echo "deleting file: $file"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the threshold percentage
-THRESHOLD=50
+THRESHOLD=5
 
 # Get the current disk usage percentage
 disk_usage=$(df | grep boot)

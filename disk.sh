@@ -4,10 +4,11 @@
 THRESHOLD=50
 
 # Get the current disk usage percentage
-disk_usage=$(df | grep xfs)
+disk_usage=$(df | grep boot)
 
 # Check if disk usage exceeds the threshold
-if [ "$disk_usage" -gt "$THRESHOLD" ]; then
+if [ $disk_usage -gt $THRESHOLD ]
+then
   echo "Warning: Disk usage has exceeded ${THRESHOLD}%."
   echo "Current disk usage: ${disk_usage}%"
 else

@@ -7,7 +7,7 @@
 
 
 USAGE(){
-    echo -e "USAGE:: sh backup.sh <source> <destination> <days>"
+    echo  "USAGE:: sh backup.sh <source> <destination> <days>"
 
 }
  #check source and desination are provided
@@ -36,7 +36,7 @@ if [ ! -z $FILES ]
 then 
     echo "Files are found"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-    find ${SOURCE_DIR} -name "*.log" -mtime +14 | zip "ZIP_FILE" -@
+    find ${SOURCE_DIR} -name "*.log" -mtime +14 | zip "$ZIP_FILE" -@
 
     if [ -f $ZIP_FILE ]
     then

@@ -2,7 +2,7 @@
  
  SOURCE_DIR=$1
  DEST_DIR=$2
- DAYS=${3: -14}
+ DAYS=$(14)
  TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 
